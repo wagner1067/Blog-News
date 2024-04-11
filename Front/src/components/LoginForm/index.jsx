@@ -4,7 +4,7 @@ import { useState } from "react";
 const LoginForm = () => {
     const [formulario, setFormulario] = useState({
         email: '',
-        senha:'',
+        senha: '',
     })
 
     const aoSubmeter = (e) => {
@@ -13,11 +13,11 @@ const LoginForm = () => {
     };
 
     const aoAlterarValores = (e) => {
-       const {name, value} = e.target
-       setFormulario({
-        ...formulario,
-        [name]: value
-       }) 
+        const { name, value } = e.target
+        setFormulario({
+            ...formulario,
+            [name]: value
+        })
     };
 
     return (
@@ -28,7 +28,7 @@ const LoginForm = () => {
             </div>
             <div>
                 <label htmlFor="senha">Senha</label>
-                <input type="password" name="senha" onChange={aoAlterarValores}/>
+                <input type="password" name="senha" onChange={aoAlterarValores} />
             </div>
             <button type="submit">Enviar</button>
         </form>
