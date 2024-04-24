@@ -1,15 +1,25 @@
 'use client';
+import axios from "axios";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
+
 const LoginForm = () => {
+    const router = useRouter();
     const [formulario, setFormulario] = useState({
         email: '',
         senha: '',
     })
 
-    const aoSubmeter = (e) => {
+    const aoSubmeter = async (e) => {
         e.preventDefault()
-        console.log('submeteu', formulario)
+        try {
+            const result = await axios.post('http://localhost:8080/login', formulario)
+            alert(result.data.message)
+            router.push('/admin/noticia/criar')
+        } catch (error) {
+            alert(error.response.data.message)
+        }
     };
 
     const aoAlterarValores = (e) => {
