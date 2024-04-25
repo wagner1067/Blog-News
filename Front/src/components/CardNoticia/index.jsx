@@ -1,12 +1,14 @@
 'use client'
-
+import './style.css'
 
 const CardNoticia = ({ noticia }) => {
     return (
-        <div>
+        <div className="card-noticia">
+            <div className="imagem" style={{ backgroundImage: `url(${noticia.img})` }} />
             <h2>{noticia.titulo}</h2>
-            <img src={noticia.img} alt={noticia.titulo} />
             <p dangerouslySetInnerHTML={{ __html: noticia.texto }} />
+            <hr />
+            <div className='publicado-em' >{new Date(noticia.createdAt).toLocaleDateString('pt-BR')}</div>
         </div>
     )
 }

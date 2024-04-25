@@ -21,8 +21,8 @@ const HomePage = () => {
         getNoticias();
     }, []);
     return (
-        <div>
-            <h1>
+        <div >
+            <h1 style={{ padding: '10px  0', textAlign: 'center' }} >
                 Home
             </h1>
             {noticias.map(noticia =>

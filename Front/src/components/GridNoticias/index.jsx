@@ -1,5 +1,5 @@
 'use client'
-
+import './style.css'
 import CardNoticia from "../CardNoticia";
 
 const GridNoticias = ({ noticias }) => {
