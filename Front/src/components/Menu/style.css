@@ -3,14 +3,14 @@
   justify-content: space-between;
   height: 50px;
   background-color: #fff;
-  color: red;
+  color: #fccd07;
   align-items: center;
   padding: 0px 12px;
 }
 
 .menu button {
   background-color: transparent;
-  color: red;
+  color: #fccd07;
   border: none;
 }
 
@@ -18,7 +18,7 @@
   height: 100vh;
   width: 200px;
   background-color: #fff;
-  color: red;
+  color: #333;
   position: fixed;
   top: 0px;
   left: 0px;
@@ -29,4 +29,31 @@
   width: 100%;
   text-align: right;
   cursor: pointer;
+}
+
+.menu_lateral ul li {
+  margin-bottom: 20px;
+}
+
+.menu_lateral ul li:hover {
+  color: #fccd07;
+}
+
+.menu .login {
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #fccd07;
+  color: #333;
+}
+
+.menu .marca {
+  font-weight: bold;
+  font-size: 20px;
+  margin-left: 4px;
+}
+
+.menu .logo-container {
+  display: flex;
+  align-items: center;
 }

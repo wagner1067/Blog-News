@@ -22,9 +22,7 @@ const HomePage = () => {
     }, []);
     return (
         <div >
-            <h1 style={{ padding: '10px  0', textAlign: 'center' }} >
-                Home
-            </h1>
+
             {noticias.map(noticia =>
                 <Noticia key={noticia.id} noticia={noticia} />)}
         </div>
