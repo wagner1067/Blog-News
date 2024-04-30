@@ -1,10 +1,8 @@
 'use client'
 import CardNoticia from "../CardNoticia";
 import './style.css'
+import truncateWithEllipses from './../../libs/truncateWithEllipse';
 
-function truncateWithEllipses(text, max) {
-    return text.substr(0, max - 1) + (text.length > max ? '&hellip;' : '');
-}
 
 export const LateralEsquerdo = () => {
     const noticia = {
