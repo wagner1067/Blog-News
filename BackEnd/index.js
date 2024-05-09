@@ -4,7 +4,6 @@ const jwt = require('jsonwebtoken');
 const cors = require('cors')
 const usuarioModel = require('./src/module/usuario/usuario.model.js');
 const noticiaModel = require('./src/module/noticia/noticia.model.js');
-const NoticiaModel = require('./src/module/noticia/noticia.model.js');
 
 const app = express();
 app.use(express.json());

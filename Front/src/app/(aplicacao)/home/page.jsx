@@ -19,20 +19,32 @@ const HomePage = () => {
         } catch (error) {
             alert(error.response.data.message);
         }
-
     }
+
+    const getNoticiaMaisPopular = () => {
+        if (noticias) {
+            return noticias.find(noticia => noticia.isPopular)
+        }
+    }
+
+    const getUltimasNoticias = () => {
+        if (noticias) {
+            return noticias.find(noticia => noticia.isUltimas)
+        }
+    }
+
     useEffect(() => {
         getNoticias();
     }, []);
     return (
         <div className="grid-home" >
-            <LateralEsquerdo />
+            {getNoticiaMaisPopular() && <LateralEsquerdo noticia={getNoticiaMaisPopular()} />}
             <div>
                 {noticias.map(noticia =>
                     <Noticia key={noticia.id} noticia={noticia} />)
                 }
             </div>
-            <LateralDireito />
+            {getUltimasNoticias() && <LateralDireito noticias={getUltimasNoticias()} />}
         </div>
     )
 };
